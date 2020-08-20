@@ -1,0 +1,80 @@
+@import './main.scss';
+.location-sidebar {
+    height: $max;
+    background-color: $blueBack;
+    color: $light;
+}
+
+.sidebar-content {
+    padding-top: 50px;
+}
+
+.cityInputGroup {
+    background-color: $blueBack;
+    border-radius: 0;
+    padding-left: 0.75rem;
+    border: 1px solid $light;
+    width: 70%;
+    &:focus-within {
+        box-shadow: $locationInputBoxShadow;
+    }
+    .lens {
+        opacity: 0.6;
+    }
+    #cityInput {
+        background-color: $blueBack;
+        border: none;
+        padding: 0.75rem 0.75rem 0.75rem 0.5rem;
+        color: $light;
+        height: auto;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.submitBtn {
+    padding: 0.75rem;
+    background-color: $locationSubmitBtn;
+    border: 1px solid $locationSubmitBtn;
+    &:hover {
+        background-color: $locationSubmitBtnHover;
+        border-color: $locationSubmitBtnHover;
+    }
+}
+
+.searchResult {
+    padding: 1rem 0.75rem;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    .chevron {
+        color: #616475;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+        border: 1px solid #616475;
+        .chevron {
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #sidebar {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #sidebar {
+        width: 33.33%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #sidebar {
+        width: 25%;
+    }
+}
