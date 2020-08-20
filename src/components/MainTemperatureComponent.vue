@@ -3,7 +3,7 @@
     <b-button class="search-location" v-b-toggle.location>Search for Places</b-button>
     <!-- <span class="circle"></span> -->
     <!-- <b-img-lazy class="location-icon" :src="require('./../assets/icons/location.png')" fluid></b-img-lazy> -->
-    <b-sidebar width="375px" no-header id="location" shadow v-slot:default="{ hide }">
+    <b-sidebar width="27rem" no-header id="location" shadow v-slot:default="{ hide }">
       <button @click="hide" type="button" aria-label="Close" class="close text-light">
         <svg
           viewBox="0 0 16 16"
