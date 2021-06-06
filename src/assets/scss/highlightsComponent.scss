@@ -1,188 +1,167 @@
 @import './main.scss';
+.highlightsComponent {
+    height: 100%;
+    overflow: hidden;
+    .degree {
+        float: right;
+        margin: 40px 40px 0px 0px;
+        .degreeBtn {
+            border: none;
+            background-color: $degreeBtn;
+            &:hover {
+                background-color: $degreeBtnHoverBg;
+                color: $degreeBtnHover;
+            }
+        }
+        .rounded-pill {
+            border-radius: 50rem;
+        }
+    }
+    .card {
+        background-color: $blueBack;
+    }
+    .alignCards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 90px 25px 20px;
+        .forthComing {
+            margin: 10px 5px;
+            min-height: 222px;
+            width: 142px;
+            .top {
+                margin-bottom: 10px;
+                text-align: center;
+                padding: 0px 0px 15px 0px;
+            }
+            .bottom {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 15px;
+                .right {
+                    padding-left: 10px;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+    .todaysHighlight {
+        padding: 15px 10px 15px 40px;
+    }
+    .highlightsCardHolder {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .highlightsCard {
+            .highlightsTop {
+                text-align: center;
+            }
+            .windSpeedMiddle {
+                display: flex;
+                justify-content: center;
+                padding: 15px 0px 15px 0px;
+            }
+            .middle {
+                display: flex;
+                justify-content: center;
+            }
+            .mainStat {
+                font-size: 4rem;
+                font-weight: 700;
+                .unit {
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+            }
+            .humidityProgress {
+                width: 100%;
+                max-width: 400px;
+            }
+            .barNotation {
+                font-size: .8rem;
+                opacity: .6;
+            }
+            .progress,
+            .progress-bar {
+                display: flex;
+                overflow: hidden;
+            }
+            .progress-bar {
+                background-color: $progressBarBg;
+            }
+            .progress {
+                height: 1rem;
+                line-height: 0;
+                font-size: .75rem;
+                background-color: $progressBg;
+                border-radius: .25rem;
+            }
+            .highlightsBottom {
+                text-align: center;
+                font-size: 18px;
+            }
+            .badge {
+                display: inline-block;
+                padding: .25em .4em;
+                font-size: 75%;
+                font-weight: 700;
+                line-height: 1;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: baseline;
+                border-radius: .25rem;
+                transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            }
+            .windDirection {
+                padding: .3rem;
+            }
+            .badge-secondary {
+                color: $white;
+                background-color: $badgeSecondaryBg;
+            }
+            .badge-pill {
+                border-radius: 10rem;
+            }
+        }
+    }
+}
+
+//For ipad
+@media only screen and (max-width: 1023px) {
+    .highlightsComponent {
+        .alignCards {
+            .forthComing {
+                width: 121px;
+            }
+        }
+        .todaysHighlight {
+            padding: 15px 10px 15px 20px;
+        }
+        .highlightsCardHolder {
+            display: block;
+            padding-left: 0;
+            margin-bottom: 0;
+            .highlightsCard {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
 //For Small Devices
 @media only screen and (max-width: 600px) {
-    .forthComing {
-        height: 270px;
-        margin: 20px 10px 0px 10px;
-        width: 40%;
+    .highlightsComponent {
+        .alignCards {
+            .forthComing {
+                margin: 20px 10px 0px;
+                width: 42%;
+            }
+        }
+        .todaysHighlight {
+            padding: 15px 0px 15px 20px;
+        }
+        .highlightsCard {
+            margin-bottom: 10px;
+        }
     }
-    .imgHolder {
-        height: 140px;
-    }
-    .highlightsCard {
-        height: 230px;
-        margin: 20px 10px 0px 0px;
-        width: 90%;
-        overflow: $hidden;
-    }
-    .highlightsLastCard {
-        height: 155px;
-        margin: 20px 10px 0px 0px;
-        width: 90%;
-        overflow: $hidden;
-    }
-}
-
-//For Desktop
-@media only screen and (min-width: 600px) {
-    .forthComing {
-        height: 280px;
-        margin: 0px 20px 0px 10px;
-        width: 17%;
-    }
-    .imgHolder {
-        height: 150px;
-    }
-    .highlightsCard {
-        height: 230px;
-        margin-left: 80px;
-        width: 450px;
-        overflow: $hidden;
-    }
-    .highlightsLastCard {
-        height: 155px;
-        margin: 30px 0px 20px 80px;
-        width: 450px;
-        overflow: $hidden;
-    }
-}
-
-.highlightsComponent {
-    overflow: $hidden;
-    height: $max;
-}
-
-.degree {
-    float: right;
-    margin: 40px 40px 0px 0px;
-}
-
-.degreeBtn {
-    border: none;
-    background-color: $degreeBtn;
-}
-
-.degreeBtn:hover {
-    background-color: $degreeBtnHoverBg;
-    color: $degreeBtnHover;
-}
-
-.rounded-pill {
-    border-radius: 50rem!important;
-}
-
-.alignCards {
-    margin: 100px 0px 30px 40px;
-}
-
-.card {
-    display: $inlineBlock;
-    background-color: $blueBack;
-}
-
-.top {
-    margin-bottom: 10px;
-    text-align: $center;
-    padding: 0px 0px 15px 0px;
-}
-
-.highlightsTop {
-    text-align: $center;
-}
-
-.bottom {
-    padding: 30px 15px 10px 15px;
-}
-
-.left {
-    float: $left;
-}
-
-.right {
-    opacity: 0.6;
-    float: $right;
-}
-
-.todaysHighlight {
-    padding: 15px 0px 15px 40px;
-}
-
-.middle {
-    display: $flex;
-    justify-content: $center;
-}
-
-.windSpeedMiddle {
-    display: $flex;
-    justify-content: $center;
-    padding: 15px 0px 15px 0px;
-}
-
-.mainStat {
-    font-size: 90px;
-    font-weight: 700;
-}
-
-.unit {
-    font-size: 30px;
-    font-weight: 600;
-}
-
-.highlightsBottom {
-    text-align: center;
-    font-size: 18px;
-}
-
-.badge {
-    display: $inlineBlock;
-    padding: .25em .4em;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    text-align: $center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
-.windDirection {
-    padding: .3rem;
-}
-
-.badge-secondary {
-    color: $white;
-    background-color: $badgeSecondaryBg;
-}
-
-.badge-pill {
-    border-radius: 10rem;
-}
-
-.humidityProgress {
-    width: $max;
-    max-width: 400px;
-}
-
-.barNotation {
-    font-size: .8rem;
-    opacity: .6;
-}
-
-.progress,
-.progress-bar {
-    display: $flex;
-    overflow: $hidden;
-}
-
-.progress-bar {
-    background-color: $progressBarBg;
-}
-
-.progress {
-    height: 1rem;
-    line-height: 0;
-    font-size: .75rem;
-    background-color: $progressBg;
-    border-radius: .25rem;
 }

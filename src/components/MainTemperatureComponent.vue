@@ -1,8 +1,6 @@
 <template>
   <b-col md="3" xs="12" sm="12" class="mainTemperatureComponent">
     <b-button class="search-location" v-b-toggle.location>Search for Places</b-button>
-    <!-- <span class="circle"></span> -->
-    <!-- <b-img-lazy class="location-icon" :src="require('./../assets/icons/location.png')" fluid></b-img-lazy> -->
     <b-sidebar width="27rem" no-header id="location" shadow v-slot:default="{ hide }">
       <button @click="hide" type="button" aria-label="Close" class="close text-light">
         <svg

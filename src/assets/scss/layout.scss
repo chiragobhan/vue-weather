@@ -3,13 +3,13 @@
 }
 
 .highlightsComponent {
-    height: $maxVerticalHeight;
+    height: 100vh;
     background-color: $dark;
 }
 
 .card {
-    max-width: $max;
-    overflow-x: $hidden;
+    max-width: 100%;
+    overflow-x: hidden;
     border: 0px;
     background-color: $dark;
 }

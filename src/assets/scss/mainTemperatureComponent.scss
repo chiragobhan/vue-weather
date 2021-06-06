@@ -1,96 +1,4 @@
 @import './main.scss';
-//For Small Devices
-@media only screen and (max-width: 600px) {
-    .temperatureHolder {
-        text-align: $center;
-    }
-    .weatherIcon {
-        position: fixed;
-        margin-top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transform: -webkit-translate(-50%, -50%);
-        transform: -moz-translate(-50%, -50%);
-        transform: -ms-translate(-50%, -50%);
-        z-index: 2;
-        position: $relative;
-        width: 180px;
-    }
-    .cloudBg {
-        opacity: 0.1;
-        transform: scale(1.5);
-        z-index: 1.5;
-        position: $absolute;
-        margin-top: 85px;
-        height: 205px;
-        width: $max;
-    }
-    .circle {
-        margin: 33px 20px 0px 170px;
-        height: 35px;
-        width: 35px;
-        background-color: $circleBg;
-        border-radius: 50%;
-        display: $inlineBlock;
-        z-index: 1.5;
-        position: $absolute;
-        cursor: $pointer;
-    }
-    .location-icon {
-        float: right;
-        margin: 41px 20px 0px 178px;
-        z-index: 2;
-        position: $absolute;
-        cursor: $pointer;
-    }
-}
-
-//For Desktops
-@media only screen and (min-width: 600px) {
-    .temperatureHolder {
-        text-align: $center;
-    }
-    .weatherIcon {
-        position: fixed;
-        margin-top: 65%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transform: -webkit-translate(-50%, -50%);
-        transform: -moz-translate(-50%, -50%);
-        transform: -ms-translate(-50%, -50%);
-        z-index: 2;
-        position: $relative;
-        width: 200px;
-    }
-    .cloudBg {
-        opacity: 0.1;
-        transform: scale(1.5);
-        z-index: 1.2;
-        position: $absolute;
-        margin-top: 110px;
-        height: 205px;
-        width: $max;
-    }
-    .circle {
-        margin: 33px 20px 0px 90px;
-        height: 35px;
-        width: 35px;
-        background-color: $circleBg;
-        border-radius: 50%;
-        display: $inlineBlock;
-        z-index: 1.5;
-        position: $absolute;
-        cursor: $pointer;
-    }
-    .location-icon {
-        float: right;
-        margin: 41px 20px 0px 99px;
-        z-index: 2;
-        position: $absolute;
-        cursor: $pointer;
-    }
-}
-
 .mainTemperatureComponent {
     width: 100%;
 }
@@ -111,7 +19,7 @@ h1 {
 
 .weatherStatus {
     opacity: 0.6;
-    text-align: $center;
+    text-align: center;
     margin-top: 50px;
 }
 
@@ -122,21 +30,122 @@ h1 {
 .date {
     opacity: 0.4;
     margin-top: 100px;
-    text-align: $center;
+    text-align: center;
 }
 
 .city {
     opacity: 0.4;
     margin-top: 40px;
-    text-align: $center;
+    text-align: center;
     margin-bottom: 25%;
 }
 
 .b-sidebar-outer {
-    position: $relative !important;
+    position: relative !important;
 }
 
 .search-location {
     margin: 30px 50px 0px 30px;
-    display: inline;
+}
+
+//For Desktops
+@media only screen and (min-width: 600px) {
+    .temperatureHolder {
+        text-align: center;
+    }
+    .weatherIcon {
+        position: fixed;
+        margin-top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform: -webkit-translate(-50%, -50%);
+        transform: -moz-translate(-50%, -50%);
+        transform: -ms-translate(-50%, -50%);
+        z-index: 2;
+        position: relative;
+        width: 200px;
+    }
+    .cloudBg {
+        opacity: 0.1;
+        transform: scale(1.5);
+        z-index: 1.2;
+        position: absolute;
+        margin-top: 110px;
+        height: 205px;
+        width: 100%;
+    }
+    .circle {
+        margin: 33px 20px 0px 90px;
+        height: 35px;
+        width: 35px;
+        background-color: $circleBg;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: 1.5;
+        position: absolute;
+        cursor: pointer;
+    }
+    .location-icon {
+        float: right;
+        margin: 41px 20px 0px 99px;
+        z-index: 2;
+        position: absolute;
+        cursor: pointer;
+    }
+}
+
+//For ipad
+@media only screen and (max-width: 1023px) {
+    .weatherIcon {
+        width: 175px;
+    }
+    .search-location {
+        margin: 30px 19px 0px;
+    }
+}
+
+//For Small Devices
+@media only screen and (max-width: 600px) {
+    .temperatureHolder {
+        text-align: center;
+    }
+    .weatherIcon {
+        position: fixed;
+        margin-top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform: -webkit-translate(-50%, -50%);
+        transform: -moz-translate(-50%, -50%);
+        transform: -ms-translate(-50%, -50%);
+        z-index: 2;
+        position: relative;
+        width: 180px;
+    }
+    .cloudBg {
+        opacity: 0.1;
+        transform: scale(1.5);
+        z-index: 1.5;
+        position: absolute;
+        margin-top: 85px;
+        height: 205px;
+        width: 100%;
+    }
+    .circle {
+        margin: 33px 20px 0px 170px;
+        height: 35px;
+        width: 35px;
+        background-color: $circleBg;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: 1.5;
+        position: absolute;
+        cursor: pointer;
+    }
+    .location-icon {
+        float: right;
+        margin: 41px 20px 0px 178px;
+        z-index: 2;
+        position: absolute;
+        cursor: pointer;
+    }
 }

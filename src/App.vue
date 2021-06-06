@@ -51,7 +51,7 @@ export default {
       this.loading = true;
       axios
         .get(
-          `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`
+          `https://cors.bridged.cc/https://www.metaweather.com/api/location/${woeid}/`
         )
         .then((response) => {
           this.weatherData = response.data;
