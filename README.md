@@ -2,6 +2,8 @@
 A [weather app](https://chiragobhan.github.io/vue-weather/) build with [VueJS](https://vuejs.org/) and [bootstrap-vue](https://bootstrap-vue.org/).  
 API Used: https://www.metaweather.com/api/  
   
+**Important Update**: CORS-Anywhere policies have [changed](https://github.com/Rob--W/cors-anywhere/issues/301), before you click the demo link below, kindly go to [this link](https://cors-anywhere.herokuapp.com/corsdemo) and click on "Request temporary access to the demo server" button. You will not be able to load the live demo unless you do this step.  
+  
 Live Demo - https://chiragobhan.github.io/vue-weather/
 
 ### User Story
