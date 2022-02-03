@@ -51,7 +51,7 @@ export default {
       this.loading = true;
       axios
         .get(
-          `https://thingproxy.freeboard.io/fetch/https://www.metaweather.com/api/location/${woeid}/`
+          `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`
         )
         .then((response) => {
           this.weatherData = response.data;
